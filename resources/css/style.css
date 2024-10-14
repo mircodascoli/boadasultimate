@@ -1,0 +1,552 @@
+
+
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    background-color: #000;
+    font-family: 'Poppins', 'arial';
+    font-size: 20px; 
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    color:#fff;
+}
+
+section {
+    padding: 40px 0;
+}
+
+/* ----------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ----------------------------------------------- */
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 200;
+    font-size: 300%; 
+    color: #fff;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #8a380f;
+    content: " ";
+    width: 100px;
+    margin: 8% auto;
+  
+}
+
+h3 {
+    text-align: center;
+    text-transform: uppercase;
+  
+    font-weight: 200;
+    font-size: 170%; 
+    color:#fff;
+    
+  
+    
+}
+
+
+/* ----------------------------------------------- */
+/* HEADER */
+/* ----------------------------------------------- */
+header{
+    height: 100vh;
+     width: 100vw;
+    
+    }
+
+.full-screen-video-container{
+    overflow: hidden;
+    position: relative;
+    height: 100vh; 
+    width: 100vw;
+}
+
+.full-screen-video-container video{
+    position: absolute;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.hero-logo-box {
+   height:100%;
+   width:100%;
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+.hero-logo-box img {
+    height: 350px;
+    width: auto;  
+}
+
+/* ----------------------------------------------- */
+/* main nav */
+/* ----------------------------------------------- */
+nav{
+    height: 80px;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.links-container{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+}
+
+.nav-links {
+    height: 50px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+}
+
+.nav-links:hover{
+    background-color:  #8a380f;
+}
+.translate{
+    flex-direction: column;
+}
+.translate:hover{
+    background-color: #000;
+}
+.en{
+ color: #8a7861;
+}
+
+#sidebar-active{
+    display:none;
+}
+.open-sidebar-button,.close-sidebar-button {
+    
+    display: none;
+}
+#home{
+    margin-right: auto;
+}
+
+nav img{
+    height: 50px;
+    width: auto;
+    z-index: 10;
+    
+}
+
+/* ----------------------------------------------- */
+/* sticky nav */
+/* ----------------------------------------------- */
+.sticky{
+    position: fixed;
+    z-index: 10;
+}
+
+@media(max-width:500px){
+}
+/* ----------------------------------------------- */
+/* the bar*/
+/* ----------------------------------------------- */
+
+
+#the-bar{
+    padding-top: 85px;
+    background-color: #000;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.raices{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),url(img/raices-background.jpg);
+}
+
+.raices h3{
+ margin-top: 5px;
+}
+
+.hoy{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),url(img/hoy-background.jpg)
+}
+
+#the-bar-items{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+}
+#the-bar-items p { 
+    margin-bottom: 3%;
+    width: 75%;
+    line-height: 145%;
+    text-align: center;
+ }
+
+#the-bar-items img {
+    width: 50%;
+    height: 60%;
+    margin-top: 3%;
+}
+
+
+/* ----------------------------------------------- */
+/* Gallery */
+/* ----------------------------------------------- */
+
+#gallery-photos{
+ background-color: #000;
+ display: flex;
+ flex-direction: column;
+}
+
+#gallery-1{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+    
+}
+
+#gallery-2{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  
+}
+ #gallery-1 img{
+      
+  width: 33%;
+  height: auto;
+     
+}
+
+#gallery-2 img{
+ width: 33%;
+  height: auto;
+}
+
+
+/* ----------------------------------------------- */
+/* TESTIMONIALS */
+/* ----------------------------------------------- */
+
+.about-us {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),url(img/hero.jpg);
+    background-image:inear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(img/hero.jpg);  
+     height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+  
+    
+}
+.about-us h2:after {
+   margin : 3% auto;
+}
+
+.cite-container{
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin: auto 5%;
+}
+
+.testimonial p:before {
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    position: relative;
+    margin-top: 7%;
+}
+
+.testimonial{
+    width: 55%;   
+    margin-left: 2%;
+    margin-right: 2%;
+   
+}
+
+cite{
+    margin-left: 60%;
+    margin-top: 8%;
+}
+
+cite img{
+    max-height: 25px;
+    width: auto;
+    vertical-align: middle; 
+}
+
+/* ----------------------------------------------- */
+/* SECCION MENU */
+/* ----------------------------------------------- */
+
+.carta-container{
+    padding: 80px 0 0 0;
+    background-color:#fff;
+    color:#fff;
+    height: 100vh;
+    width: 100vw;
+}
+
+.carta-container p{
+    color: #fff;
+}
+
+.row-carta{
+    display:flex;
+    flex-direction: row;
+    height: 50%;
+}
+
+.seccion-carta{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.seccion-carta p{
+    margin: auto 10%;
+}
+
+.exoticos{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),url(img/exotic-background.jpg);
+
+}
+
+.exoticos h3 {
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-size: 200%;
+}
+
+
+.disco{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),url(img/disco-era-background.jpg);
+}
+
+.disco h3 {
+    font-family: "Spicy Rice", serif;
+    font-weight: 400;
+    font-size: 300%;
+}
+
+.classics{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),url(img/classics-background.jpg);
+}
+
+.classics h3{
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-size: 250%;
+   
+}
+
+
+.vintage{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),url(img/vintage-backgound.jpg);
+}
+
+.vintage h3{
+    font-family: "Fredericka the Great", serif;
+    font-weight: 400;
+    font-size: 250%;
+}
+
+/* ----------------------------------------------- */
+/* SECTION RULES */
+/* ----------------------------------------------- */
+
+.rules { 
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),url(img/back-costumers.png);   
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 85px;
+}
+.header-rules{
+    text-align: center;
+    align-content: center;
+}
+.header-rules p{
+    margin: 20px 15% 0 15%;
+}
+
+.rules-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 60%;
+    width: 90%;
+    color: #fff;
+    text-align: center;
+}
+
+.rules-container p {
+    font-style: italic; 
+    
+}
+
+.dresscode{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    height: 80%;
+
+}
+
+.dresscode i{
+ color: #8a7861;
+
+}
+.dresscode p{
+ line-height: 1.8;
+}
+
+.not-permitted{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-evenly; width: 50%;
+ height: 90%;
+}
+
+.not-permitted p{
+ font-size: 125%;
+}
+
+
+/* ----------------------------------------------- */
+/* FOOTER */
+/* ----------------------------------------------- */
+
+footer {
+ background-color: #000;
+ padding: 8% 5%;
+ color: #8a7861;
+ text-transform: uppercase;
+ font-size: 70%;
+ display: flex;
+ flex-direction: column;
+}
+
+.upper-footer{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;  
+}
+
+.block {
+ display: block;
+ height: 1px;
+ background-color: #8a380f;
+ content: " ";
+ width: 80%;
+ margin: 3% auto;
+}
+
+.footer-icons{
+ display: flex;
+ flex-direction: row;
+}
+
+.contacts{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+ font-size: 130%;
+ line-height: 1.5;
+}
+
+.creditors{
+ display: flex;
+ flex-direction: row;
+justify-content: space-around; 
+}
+
+.boadas-credits{
+ margin-top: 3%;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+ font-style: italic;
+}
+
+footer svg{
+ height:25px;
+ margin-right:7px;
+}
+
+footer i {
+ color: #8a380f;
+}
+
+
+
+
+
